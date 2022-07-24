@@ -10,7 +10,7 @@ for s in f.readlines():
         departures.append(s)
 
 for s in departures:
-    info = re.findall(r'(^\d\d-\d\d-\d\d\d\d,\w+ \w+,[\w | ]+,)Departure,BLR,Bengaluru,Kempegowda International Airport,\d\d-\d\d-\d\d\d\d,\d\d:\d\d .*,(?: \d\d:\d\d .*)?,\d?,\w\w\w,([\w | ]+)', s)
+    info = re.findall(r'(^\d\d-\d\d-\d\d\d\d,\w+ \w+,[\w | ]+,)Departure,BLR,Bengaluru,Kempegowda International Airport,\d\d-\d\d-\d\d\d\d,\d\d:\d\d .*,.*,\d?,[A-Z]{3},([\w | ]+)', s)
     print(info)
     
 f.close()
